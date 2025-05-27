@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía: Ejecutar App con API de Google AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+      margin-bottom: 2rem;
+    }
+    .step {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      align-items: flex-start;
+    }
+    .step-text {
+      flex: 1;
+    }
+    .step h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #1976d2;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .step p {
+      margin: 0.5rem 0;
+    }
+    .step img {
+      max-width: 200px;
+      border-radius: 12px;
+      border: 2px solid #90caf9;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .step img:hover {
+      transform: scale(1.05);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+    .modal:target {
+      display: flex;
+    }
+    .modal-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: #fff;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+    code {
+      background-color: #f1f1f1;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #d32f2f;
+    }
+    @media (max-width: 768px) {
+      .step {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Guía para ejecutar tu aplicación</h1>
+
+    <div class="step">
+      <div class="step-text">
+        <h2><i class="fas fa-key"></i> 1. Crear clave API</h2>
+        <p>Accede a Google AI Studio y genera tu clave API. <strong>No la compartas con nadie.</strong></p>
+      </div>
+      <a href="#img1"><img src="https://i.ibb.co/Ld8bP1LZ/crear-clave.png" alt="Generar clave API" /></a>
+    </div>
+
+    <div class="step">
+      <div class="step-text">
+        <h2><i class="fas fa-folder-open"></i> 2. Abre tu proyecto</h2>
+        <p>Arrastra la carpeta del proyecto sobre el ícono de Visual Studio Code.</p>
+      </div>
+      <a href="#img2"><img src="https://i.ibb.co/Cp4ymRHc/abrir-carpeta.png" alt="Abrir carpeta VS Code" /></a>
+    </div>
+
+    <div class="step">
+      <div class="step-text">
+        <h2><i class="fas fa-file-code"></i> 3. Configura la clave API</h2>
+        <p>Pega tu clave en el archivo <code>.env.local</code>.</p>
+      </div>
+      <a href="#img3"><img src="https://i.ibb.co/KjNZ8ptm/pegar-clave.png" alt="Configurar .env.local" /></a>
+    </div>
+
+    <div class="step">
+      <div class="step-text">
+        <h2><i class="fas fa-download"></i> 4. Instala dependencias</h2>
+        <p>Abre la terminal y escribe: <code>npm install</code>.</p>
+      </div>
+      <a href="#img4"><img src="https://i.ibb.co/gLKRp56f/instalar-dependencias.png" alt="npm install" /></a>
+    </div>
+
+    <div class="step">
+      <div class="step-text">
+        <h2><i class="fas fa-play"></i> 5. Ejecuta la aplicación</h2>
+        <p>Escribe en la terminal: <code>npm run dev</code>.</p>
+      </div>
+      <a href="#img5"><img src="https://i.ibb.co/k2rhwxFW/ejecutar-programa.png" alt="npm run dev" /></a>
+    </div>
+
+    <div class="step">
+      <div class="step-text">
+        <h2><i class="fas fa-globe"></i> 6. Abre tu aplicación</h2>
+        <p>Ve al enlace local que aparece en la consola.</p>
+      </div>
+      <a href="#img6"><img src="https://i.ibb.co/bgHwpHHp/abrir-el-enlace.png" alt="Abrir app en navegador" /></a>
+    </div>
+
+    <div class="step">
+      <div class="step-text">
+        <h2><i class="fas fa-stop-circle"></i> 7. Detén la ejecución</h2>
+        <p>Presiona <code>Ctrl + C</code> en la terminal para detener la aplicación cuando termines.</p>
+      </div>
+      <a href="#img7"><img src="https://i.ibb.co/35nMB1LZ/fin.png" alt="Detener ejecución" /></a>
+    </div>
+  </div>
+
+  <!-- Modales -->
+  <div id="img1" class="modal"><a href="#" class="modal-close">&times;</a><img src="https://i.ibb.co/Ld8bP1LZ/crear-clave.png"></div>
+  <div id="img2" class="modal"><a href="#" class="modal-close">&times;</a><img src="https://i.ibb.co/Cp4ymRHc/abrir-carpeta.png"></div>
+  <div id="img3" class="modal"><a href="#" class="modal-close">&times;</a><img src="https://i.ibb.co/KjNZ8ptm/pegar-clave.png"></div>
+  <div id="img4" class="modal"><a href="#" class="modal-close">&times;</a><img src="https://i.ibb.co/gLKRp56f/instalar-dependencias.png"></div>
+  <div id="img5" class="modal"><a href="#" class="modal-close">&times;</a><img src="https://i.ibb.co/k2rhwxFW/ejecutar-programa.png"></div>
+  <div id="img6" class="modal"><a href="#" class="modal-close">&times;</a><img src="https://i.ibb.co/bgHwpHHp/abrir-el-enlace.png"></div>
+  <div id="img7" class="modal"><a href="#" class="modal-close">&times;</a><img src="https://i.ibb.co/35nMB1LZ/fin.png"></div>
+</body>
+</html>
